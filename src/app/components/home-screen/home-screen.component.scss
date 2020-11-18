@@ -1,0 +1,97 @@
+@import '../../../styles.scss';
+@import '../../../variable.scss';
+
+body {
+  background: #F7F7F7;
+  height: 1000px;
+  font-family: Roboto Regular;
+
+
+  .userProfile {
+    p {
+      font-size: 17px;
+      position: absolute;
+      left: 85%;
+      top: 6%;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 91%;
+      top: 5%;
+      border-radius: 30px;
+      border-color: $brightpink;
+      border-style: solid;
+    }
+  }
+
+  .card {
+    background-color: #ffffff;
+    margin: 2%;
+    border-radius: 10px;
+    height: 480px;
+    padding: 2%;
+    font-size: 16px;
+    width: 100%;
+
+    .title {
+      padding: 0;
+      margin: 0;
+      font-weight: bold;
+      font-size: 23px;
+      width: 80%;
+      padding-bottom: 7px;
+    }
+
+    .question {
+      margin-top: 15px;
+      margin-bottom: 38px;
+      background-color: $brightpink;
+      color: #ffffff;
+      border-color: $brightpink;
+      border-style: none;
+      height: 49px;
+      border-radius: 20px;
+      box-shadow: 0px 10px 13px -7px #000000, 0px 6px 15px -2px rgba(0, 0, 0, 0);
+    }
+
+    .guideLine {
+      background-color: rgba(217, 39, 86, 0.05);
+      color: #000000;
+      border-color: $brightpink;
+      border-style: none;
+      height: 49px;
+      text-align: start;
+      border-radius: 20px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 19px;
+      padding-bottom: 20px;
+    }
+
+    .bi {
+      width: 40px;
+      height: 40px;
+      color: black;
+    }
+  }
+
+  .form {
+    background-color: #ffffff;
+    display: inline-grid;
+    width: 51%;
+    position: absolute;
+    left: 33%;
+    top: 18%;
+    height: 900px;
+
+    input{
+        width: 20%;
+    }
+  }
+
+}

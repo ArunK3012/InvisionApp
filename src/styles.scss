@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.container-fluid {
+    background-color: #ffffff;
+    height: 100px;
+  
+    img {
+      width: 300px;
+      height: 75px;
+      position: relative;
+      left: 6%;
+      top: 13%;
+    }
+  }

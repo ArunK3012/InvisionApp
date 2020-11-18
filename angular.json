@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Invision-app"
+    }
+  },
+  "defaultProject": "Invision-app",
+  "cli": {
+    "analytics": "6d0ff2fd-75f7-437c-b01f-079ff86b3845"
+  }
 }
