@@ -9,29 +9,51 @@
     </div>
   </div>
   <div class="container">
-    <div class="col-3 card">
-      <p class="title">Your Questionnaires</p>
-      <button class="question">New Questionnaire</button>
-      <button class="guideLine">Secure coding Guidel...</button>
-      <p>ISMS Questionnaire <i class="bi bi-chevron-right"></i></p>
-      <p>PA Questionnaire <i class="bi bi-chevron-right"></i></p>
-      <p>Process Guidelines <i class="bi bi-chevron-right"></i></p>
-    </div>
-    <div class="col-9 form">
-      <h2>Questionnaire</h2>
-      <input type="text" placeholder="Enter Title">
-      <input type="text" placeholder="Description">
-      <input type="text" placeholder="Button Title">
-      <input type="text" placeholder="Button Text">
-      <input type="text" placeholder="Check box text">
-      <h1>Additional Details</h1>
-      <input type="text" placeholder="Select Start Date">
-      <input type="text" placeholder="Select End Date">
-      <input type="text" placeholder="Auto Reminder">
-      <input type="text" placeholder="Select Content PPT File">
-      <input type="text" placeholder="Select participant xl sheet">
-      <input type="text" placeholder="Mail Body">
-
+    <div class="row">
+      <div class="col-3 card">
+        <p class="header">Your Questionnaires</p>
+        <button class="question">NEW QUESTIONNAIRE</button>
+        <button class="guideLine">Secure coding Guidel...</button>
+        <p>ISMS Questionnaire <i class="bi bi-chevron-right"></i></p>
+        <p>PA Questionnaire <i class="bi bi-chevron-right"></i></p>
+        <p>Process Guidelines <i class="bi bi-chevron-right"></i></p>
+      </div>
+      <div class="col-9 inputForm">
+        <div class="container block">
+          <div class="row second">
+            <div class="col-9 details">
+              <h5>Questionnaire</h5>
+              <input type="text" class="title" placeholder="Enter Title">
+              <p>please enter appropriate title</p>
+              <input type="text" class="description" placeholder="Description">
+              <div class="content">
+              <input type="text" placeholder="Button Title">
+              <input type="text" placeholder="Button Text">
+            </div>
+              <input type="text" class="title" placeholder="Check box text">
+              <h6>Additional Details</h6>
+              <div class="starts">
+                <input type="text" placeholder="Select Start Date">
+                <input type="text" placeholder="Select End Date">
+                <input type="text" placeholder="Auto Reminder">
+              </div>
+              <div class="participant">
+              <input type="text" placeholder="Select Content PPT File">
+              <input type="text" placeholder="Select participant xl sheet">
+            </div>
+              <input type="text" class="mail" placeholder="Mail Body">
+            </div>
+            <div class="col-3 instruction">
+              <button>SAVE</button>
+              <button>PREVIEW</button>
+              <button>PUBLISH</button>
+              <button>REMIND</button>
+              <button>GENERATE REPORT</button>
+              <button type="button" class="btn"> <i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
