@@ -8,11 +8,6 @@ body {
   width: 100%;
   box-sizing: border-box;
 
-  .container-fluid {
-    z-index: 2;
-    position: fixed;
-  }
-
   .userProfile {
     position: relative;
     left: 84%;
@@ -29,14 +24,12 @@ body {
       left: 5%;
       top: -25%;
       border-radius: 30px;
-      border-color: #d92756;
+      border-color: $brightpink;
       border-style: solid;
     }
   }
 
   .container {
-    position: relative;
-    top: 10%;
 
     .card {
       background-color: $white;
@@ -66,7 +59,7 @@ body {
         border-style: none;
         height: 49px;
         border-radius: 20px;
-        box-shadow: 0px 10px 13px -7px #000000, 0px 6px 15px -2px rgba(0, 0, 0, 0);
+        box-shadow: 0px 10px 13px -7px $brightpink, 0px 6px 15px -2px rgba(0, 0, 0, 0);
       }
 
       .guideLine {
@@ -199,20 +192,150 @@ body {
             border-radius: 7px;
           }
 
-          .btn {
-            width: 30%;
-            border-radius: 26px;
-            height: 50px;
+          .dropup {
             position: relative;
-            top: 56%;
-            left: 55%;
-            align-items: center;
-            justify-items: center;
-            background-color: #d92756;
-            color: #ffffff;
-            font-weight: bold;
+            top: 51%;
+
+            .btn {
+              position: relative;
+              top: 56%;
+              left: 55%;
+              font-size: 26px;
+              width: 50px;
+              border-radius: 26px;
+              height: 50px;
+              align-items: center;
+              justify-items: center;
+              background-color: $brightpink;
+              color: #ffffff;
+              font-weight: bold;
+              box-shadow: 0px 10px 13px -7px $brightpink, 0px 6px 15px -2px rgba(0, 0, 0, 0);
+            }
           }
         }
+      }
+    }
+  }
+
+  .bg-modal {
+    width: 100%;
+    height: 1050px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0%;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    p {
+      font-weight: bold;
+      font-size: 26px;
+      position: relative;
+      top: 10%;
+      left: 8%;
+    }
+
+    .modal-content {
+      width: 980px;
+      height: 600px;
+      position: relative;
+      top: 28%;
+      left: 13%;
+      border-radius: 10px;
+      display: inline-block;
+
+      .close {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 42px;
+        color: #656568;
+        transform: rotate(45deg);
+        cursor: pointer;
+      }
+
+      input {
+        width: 20%;
+        position: relative;
+        top: 12%;
+        height: 54px;
+        left: 8%;
+        margin-right: 2%;
+      }
+
+      .adminMail {
+        width: 24%;
+      }
+
+      .add {
+        font-size: 26px;
+        width: 50px;
+        border-radius: 26px;
+        height: 50px;
+        top: 12%;
+        left: 9%;
+        position: relative;
+        background-color: $brightpink;
+        color: #ffffff;
+        font-weight: bold;
+        border-style: none;
+        box-shadow: 0px 10px 13px -7px $brightpink, 0px 6px 15px -2px rgba(0, 0, 0, 0);
+      }
+
+      .edit {
+        font-size: 15px;
+        width: 50px;
+        border-radius: 26px;
+        height: 50px;
+        top: 12%;
+        left: 9%;
+        position: relative;
+        background-color: $brightpink;
+        color: #ffffff;
+        font-weight: bold;
+        border-style: none;
+        box-shadow: 0px 10px 13px -7px $brightpink, 0px 6px 15px -2px rgba(0, 0, 0, 0);
+      }
+
+      .delete {
+        font-size: 17px;
+        width: 50px;
+        border-radius: 26px;
+        height: 50px;
+        top: 12%;
+        left: 11%;
+        position: relative;
+        background-color: $brightpink;
+        color: #ffffff;
+        font-weight: bold;
+        border-style: none;
+        box-shadow: 0px 10px 13px -7px $brightpink, 0px 6px 15px -2px rgba(0, 0, 0, 0);
+      }
+
+      .cancel {
+        border-radius: 30px;
+        position: relative;
+        top: 36%;
+        left: 53%;
+        margin-left: 1%;
+        width: 110px;
+        background-color: #d92756;
+        color: white;
+        border-color: #d92756;
+        border-style: none;
+        height: 49px;
+        box-shadow: 0px 10px 13px -7px #d92756, 0px 6px 15px -2px rgba(0, 0, 0, 0);
+      }
+
+      .employOne {
+        position: relative;
+        top: 23%;
+      }
+
+      .employTwo {
+        position: relative;
+        top: 28%;
       }
     }
   }

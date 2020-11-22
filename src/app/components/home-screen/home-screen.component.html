@@ -1,3 +1,5 @@
+<script src="home-screen.js"></script>
+
 <body>
   <div class="container-fluid">
     <img
@@ -27,9 +29,9 @@
               <p>please enter appropriate title</p>
               <input type="text" class="description" placeholder="Description">
               <div class="content">
-              <input type="text" placeholder="Button Title">
-              <input type="text" placeholder="Button Text">
-            </div>
+                <input type="text" placeholder="Button Title">
+                <input type="text" placeholder="Button Text">
+              </div>
               <input type="text" class="title" placeholder="Check box text">
               <h6>Additional Details</h6>
               <div class="starts">
@@ -38,22 +40,86 @@
                 <input type="text" placeholder="Auto Reminder">
               </div>
               <div class="participant">
-              <input type="text" placeholder="Select Content PPT File">
-              <input type="text" placeholder="Select participant xl sheet">
-            </div>
+                <input type="text" placeholder="Select Content PPT File">
+                <input type="text" placeholder="Select participant xl sheet">
+              </div>
               <input type="text" class="mail" placeholder="Mail Body">
             </div>
             <div class="col-3 instruction">
-              <button>SAVE</button>
+              <button><img src="save.png" alt=""> SAVE</button>
               <button>PREVIEW</button>
               <button>PUBLISH</button>
               <button>REMIND</button>
               <button>GENERATE REPORT</button>
-              <button type="button" class="btn"> <i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+              <div class="dropup">
+                <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">+</button>
+                <div class="dropdown-menu">
+                  <a routerLink="/password">
+                    <button class="btnPassword">Change Password</button>
+                  </a>
+                  <a href="/home" id="btnSuperAdmin" class="btnSuperAdmin" onclick="showDialog()">Add/Remove Super Admins</a>
+                  <button data-toggle="modal" data-target="#adminModal">Add/Remove Admins</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="bg-modal" id="superAdmin" aria-hidden="true">
+    <div class="modal-content">
+      <a routerLink="/password">
+      <div class="close">+</div></a>
+      <p>Add/Remove Super Admins</p>
+      <input type="text" placeholder="Enter Name">
+      <input type="text" placeholder="Enter Employment code">
+      <input class="adminMail" type="text" placeholder="Enter Mail ID">
+      <button class="add">+</button>
+      <div class="employOne">
+        <input type="text" placeholder="Enter Name">
+        <input type="text" placeholder="Enter Employment code">
+        <input class="adminMail" type="text" placeholder="Enter Mail ID">
+        <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+        <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+      </div>
+      <div class="employTwo">
+        <input type="text" placeholder="Enter Name">
+        <input type="text" placeholder="Enter Employment code">
+        <input class="adminMail" type="text" placeholder="Enter Mail ID">
+        <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+        <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+      </div>
+      <button class="cancel">Update</button>
+      <button class="cancel">Cancel</button>
+    </div>
+  </div>
+  <div class="bg-modal" id="adminModal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="close">+</div>
+      <p>Add/Remove Admins</p>
+      <input type="text" placeholder="Enter Name">
+      <input type="text" placeholder="Enter Employment code">
+      <input class="adminMail" type="text" placeholder="Enter Mail ID">
+      <button class="add">+</button>
+      <div class="employOne">
+        <input type="text" placeholder="Enter Name">
+        <input type="text" placeholder="Enter Employment code">
+        <input class="adminMail" type="text" placeholder="Enter Mail ID">
+        <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+        <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+      </div>
+      <div class="employTwo">
+        <input type="text" placeholder="Enter Name">
+        <input type="text" placeholder="Enter Employment code">
+        <input class="adminMail" type="text" placeholder="Enter Mail ID">
+        <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+        <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+      </div>
+      <button class="cancel">Update</button>
+      <button class="cancel">Cancel</button>
+    </div>
+  </div>
+
 </body>
