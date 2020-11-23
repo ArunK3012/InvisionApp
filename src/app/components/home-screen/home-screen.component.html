@@ -1,5 +1,3 @@
-<script src="home-screen.js"></script>
-
 <body>
   <div class="container-fluid">
     <img
@@ -25,41 +23,83 @@
           <div class="row second">
             <div class="col-9 details">
               <h5>Questionnaire</h5>
-              <input type="text" class="title" placeholder="Enter Title">
-              <p>please enter appropriate title</p>
-              <input type="text" class="description" placeholder="Description">
-              <div class="content">
-                <input type="text" placeholder="Button Title">
-                <input type="text" placeholder="Button Text">
+              <div class="title">
+                <input type="text" name="">
+                <label>Enter Title</label>
               </div>
-              <input type="text" class="title" placeholder="Check box text">
+              <p>please enter appropriate title</p>
+              <div class="description">
+                <input type="text" name="">
+                <label>Description</label>
+              </div>
+              <div class="content">
+                <div class="btnTitle">
+                  <input type="text" name="">
+                  <label>Button Title</label>
+                </div>
+                <div class="btnTitle">
+                  <input type="text" name="">
+                  <label>Button Text</label>
+                </div>
+              </div>
+              <div class="title">
+                <input type="text" name="">
+                <label>Check box text</label>
+              </div>
               <h6>Additional Details</h6>
-              <div class="starts">
-                <input type="text" placeholder="Select Start Date">
-                <input type="text" placeholder="Select End Date">
-                <input type="text" placeholder="Auto Reminder">
+              <div class="start">
+                <div class="startDate">
+                  <input type="text" name="">
+                  <label>Select Start Date</label>
+                  <img src=".\assets\calender.png" alt="">
+                </div>
+                <div class="startDate">
+                  <input type="text" name="">
+                  <label>Select End Date</label>
+                  <img src=".\assets\calender.png" alt="">
+                </div>
+                <div class="startDate">
+                  <input type="text" name="">
+                  <label>Auto Reminder</label>
+                </div>
               </div>
               <div class="participant">
-                <input type="text" placeholder="Select Content PPT File">
-                <input type="text" placeholder="Select participant xl sheet">
+                <div class="participantFile">
+                  <input type="text" name="">
+                  <label>Select Content PPT File</label>
+                  <img src=".\assets\upload.png" alt="">
+                </div>
+                <div class="participantFile">
+                  <input type="text" name="">
+                  <label>Select participant xl sheet</label>
+                  <img src=".\assets\upload.png" alt="">
+                </div>
               </div>
-              <input type="text" class="mail" placeholder="Mail Body">
+              <div class="mail">
+                <input type="text" name="">
+                <label>Mail Body</label>
+              </div>
             </div>
             <div class="col-3 instruction">
-              <button><img src="save.png" alt=""> SAVE</button>
-              <button>PREVIEW</button>
-              <button>PUBLISH</button>
-              <button>REMIND</button>
-              <button>GENERATE REPORT</button>
+              <button><img src=".\assets\save.png" alt="">SAVE</button>
+              <button><img src=".\assets\preview.png" alt="">PREVIEW</button>
+              <button><img src=".\assets\publish.png" alt="">PUBLISH</button>
+              <button><img src=".\assets\reminder.png" alt="">REMIND</button>
+              <button><img src=".\assets\report.png" alt="">GENERATE REPORT</button>
               <div class="dropup">
                 <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false">+</button>
                 <div class="dropdown-menu">
-                  <a routerLink="/password">
-                    <button class="btnPassword">Change Password</button>
-                  </a>
-                  <a href="/home" id="btnSuperAdmin" class="btnSuperAdmin" onclick="showDialog()">Add/Remove Super Admins</a>
-                  <button data-toggle="modal" data-target="#adminModal">Add/Remove Admins</button>
+                  <div class="patch"> </div>
+                  <div class="slider">
+                    <a routerLink="/password">
+                      <button class="btnPassword">Change Password</button>
+                    </a>
+                    <button id="btnSuperAdmin" class="btnSuperAdmin" data-toggle="modal"
+                      data-target="#superAdminModal">Add/Remove Super Admins</button>
+                    <button id="btnAdmin" class="btnAdmin" data-toggle="modal" data-target="#adminModal">Add/Remove
+                      Admins</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -68,10 +108,12 @@
       </div>
     </div>
   </div>
-  <div class="bg-modal" id="superAdmin" aria-hidden="true">
+  <div class="bg-modal" id="superAdminModal" tabindex="-1" role="dialog" aria-labelledby="superAdminModalLabel"
+    aria-hidden="true">
     <div class="modal-content">
-      <a routerLink="/password">
-      <div class="close">+</div></a>
+      <a href="/home">
+        <div id="close" class="close">+</div>
+      </a>
       <p>Add/Remove Super Admins</p>
       <input type="text" placeholder="Enter Name">
       <input type="text" placeholder="Enter Employment code">
@@ -91,13 +133,17 @@
         <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
       </div>
-      <button class="cancel">Update</button>
+      <a href="/home">
+        <button class="cancel">Update</button></a>
       <button class="cancel">Cancel</button>
     </div>
   </div>
-  <div class="bg-modal" id="adminModal" aria-hidden="true">
+  <div class="bg-modal" id="adminModal" tabindex="-1" role="dialog" aria-labelledby="adminModalLabel"
+    aria-hidden="true">
     <div class="modal-content">
-      <div class="close">+</div>
+      <a href="/home">
+        <div class="close">+</div>
+      </a>
       <p>Add/Remove Admins</p>
       <input type="text" placeholder="Enter Name">
       <input type="text" placeholder="Enter Employment code">
@@ -117,9 +163,11 @@
         <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
       </div>
-      <button class="cancel">Update</button>
+      <a href="/home">
+        <button class="cancel">Update</button></a>
       <button class="cancel">Cancel</button>
     </div>
   </div>
 
+  <script src="./homescreen.js"></script>
 </body>

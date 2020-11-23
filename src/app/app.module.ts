@@ -9,8 +9,8 @@ import { PasswordComponent } from './components/password/password.component';
   declarations: [
     AppComponent,
     LoginComponent,
+    PasswordComponent,
     HomeScreenComponent,
-    PasswordComponent
   ],
   imports: [
     BrowserModule,
