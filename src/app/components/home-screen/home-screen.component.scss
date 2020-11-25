@@ -76,6 +76,11 @@ body {
       p {
         font-size: 19px;
         padding-bottom: 20px;
+
+        img {
+          position: absolute;
+          left: 80%;
+        }
       }
 
       .bi {
@@ -124,18 +129,19 @@ body {
 
             .title {
               position: relative;
-              top: 11%;
+              top: 42%;
 
-              input:focus~label {
+              input:focus~label,
+              input:valid~label {
                 font-size: 12px;
-                top: -84px;
+                top: -3px;
                 background-color: #ffffff;
                 left: 4%;
               }
 
               label {
-                position: relative;
-                top: -42%;
+                position: absolute;
+                top: 31%;
                 left: 5%;
               }
             }
@@ -146,12 +152,13 @@ body {
               position: relative;
               left: 4%;
               height: 0px;
-              top: -128%;
+              top: -10px;
+              font-size: 12px;
             }
 
             .description {
               position: relative;
-              top: -37%;
+              top: 36%;
               height: 75px;
 
               label {
@@ -160,7 +167,8 @@ body {
                 left: 6%;
               }
 
-              input:focus~label {
+              input:focus~label,
+              input:valid~label {
                 font-size: 12px;
                 top: -84px;
                 background-color: #ffffff;
@@ -172,8 +180,9 @@ body {
               display: inline-flex;
               width: 98%;
               position: relative;
-              top: 2%;
+              top: 45%;
               left: 1%;
+              padding-bottom: 8%;
 
               label {
                 position: relative;
@@ -181,7 +190,8 @@ body {
                 left: 6%;
               }
 
-              input:focus~label {
+              input:focus~label,
+              input:valid~label {
                 font-size: 12px;
                 background-color: #ffffff;
                 top: -79px;
@@ -191,7 +201,7 @@ body {
 
             h6 {
               position: relative;
-              top: 45%;
+              top: 289%;
               left: 1%;
               font-weight: 600;
             }
@@ -200,7 +210,7 @@ body {
               width: 93%;
               display: inline-flex;
               position: relative;
-              top: 16%;
+              top: 100%;
 
               label {
                 position: relative;
@@ -214,7 +224,8 @@ body {
                 left: 16%;
               }
 
-              input:focus~label {
+              input:focus~label,
+              input:valid~label {
                 font-size: 12px;
                 background-color: #ffffff;
                 top: -77px;
@@ -226,7 +237,7 @@ body {
               display: inline-flex;
               width: 95%;
               position: relative;
-              top: 32%;
+              top: 95%;
 
               label {
                 position: relative;
@@ -240,7 +251,8 @@ body {
                 left: 16%;
               }
 
-              input:focus~label {
+              input:focus~label,
+              input:valid~label {
                 font-size: 12px;
                 background-color: #ffffff;
                 top: -78px;
@@ -250,20 +262,31 @@ body {
 
             .mail {
               position: relative;
-              top: 35%;
+              top: 120%;
 
               label {
-                position: relative;
-                top: -48%;
+                position: absolute;
+                top: 33%;
                 left: 6%;
               }
 
-              input:focus~label {
+              input:focus~label,
+              input:valid~label {
                 font-size: 12px;
                 background-color: #ffffff;
-                top: -85px;
+                top: -3px;
                 left: 4%;
               }
+            }
+
+            .line {
+              width: 2px;
+              height: 340px;
+              position: relative;
+              top: -172%;
+              left: 99%;
+              transform: translate(-50%, -50%);
+              background: $brightpink;
             }
           }
 
@@ -319,30 +342,40 @@ body {
                 justify-items: center;
                 background-color: $brightpink;
                 color: #ffffff;
-                font-weight: bold;
                 padding-left: 14px;
                 padding-top: 6px;
+                transform: rotate(0);
                 box-shadow: 0px 10px 13px -7px $brightpink, 0px 6px 15px -2px rgba(0, 0, 0, 0);
               }
 
               .dropdown-menu {
                 border: none;
                 text-align: center;
+                background-color: #ffffff00;
+                top: 29px;
 
                 .slider {
                   position: relative;
-                  left: -65%;
+                  left: -70%;
                   text-align: center;
 
-                  button{
-                    border-radius: 20px;
-                    width: 130%;
-                  
+                  a {
+                    text-decoration: none;
                   }
 
-                  // .btnPassword{
-                  //   padding-left: 50px;
-                  // }
+                  button {
+                    border-radius: 20px;
+                    width: 112%;
+                    justify-content: center;
+                    background-color: #FDF4F6;
+                    height: 36px;
+                    padding: 0;
+                    padding-top: 10px;
+                  }
+
+                  .btnSuperAdmin {
+                    position: relative;
+                  }
                 }
               }
             }
@@ -380,6 +413,19 @@ body {
       border-radius: 10px;
       display: inline-block;
       z-index: 1050;
+
+      .rectangle {
+        width: 100%;
+        position: relative;
+        top: 17%;
+        color: #A2A2A2;
+        border-color: #A2A2A2;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-style: dashed;
+        border-width: 1px;
+      }
 
       .close {
         position: absolute;

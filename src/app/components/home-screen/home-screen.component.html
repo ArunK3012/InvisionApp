@@ -1,8 +1,6 @@
 <body>
   <div class="container-fluid">
-    <img
-      src="https://1z1euk35x7oy36s8we4dr6lo-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/robosoft_logo_horizontal_copy.jpeg.jpg"
-      alt="robosoft logo">
+    <img src=".\assets\logo.jpg" alt="">
     <div class="userProfile">
       <p>Jane Doe</p>
       <img src="https://ps.w.org/wp-user-avatar/assets/icon-256x256.png?rev=1755722" alt="">
@@ -14,9 +12,9 @@
         <p class="header">Your Questionnaires</p>
         <button class="question">NEW QUESTIONNAIRE</button>
         <button class="guideLine">Secure coding Guidel...</button>
-        <p>ISMS Questionnaire <i class="bi bi-chevron-right"></i></p>
-        <p>PA Questionnaire <i class="bi bi-chevron-right"></i></p>
-        <p>Process Guidelines <i class="bi bi-chevron-right"></i></p>
+        <p>ISMS Questionnaire <img src=".\assets\arrow.png" alt=""></p>
+        <p>PA Questionnaire <img src=".\assets\arrow.png" alt=""></p>
+        <p>Process Guidelines <img src=".\assets\arrow.png" alt=""></p>
       </div>
       <div class="col-9 inputForm">
         <div class="container block">
@@ -24,61 +22,62 @@
             <div class="col-9 details">
               <h5>Questionnaire</h5>
               <div class="title">
-                <input type="text" name="">
+                <input type="text" name="" required="">
                 <label>Enter Title</label>
               </div>
               <p>please enter appropriate title</p>
               <div class="description">
-                <input type="text" name="">
+                <input type="text" name="" required="">
                 <label>Description</label>
               </div>
               <div class="content">
                 <div class="btnTitle">
-                  <input type="text" name="">
+                  <input type="text" name="" required="">
                   <label>Button Title</label>
                 </div>
                 <div class="btnTitle">
-                  <input type="text" name="">
+                  <input type="text" name="" required="">
                   <label>Button Text</label>
                 </div>
               </div>
               <div class="title">
-                <input type="text" name="">
+                <input type="text" name="" required="">
                 <label>Check box text</label>
               </div>
               <h6>Additional Details</h6>
               <div class="start">
                 <div class="startDate">
-                  <input type="text" name="">
+                  <input type="text" name="" required="">
                   <label>Select Start Date</label>
                   <img src=".\assets\calender.png" alt="">
                 </div>
                 <div class="startDate">
-                  <input type="text" name="">
+                  <input type="text" name="" required="">
                   <label>Select End Date</label>
                   <img src=".\assets\calender.png" alt="">
                 </div>
                 <div class="startDate">
-                  <input type="text" name="">
+                  <input type="text" name="" required="">
                   <label>Auto Reminder</label>
                 </div>
               </div>
               <div class="participant">
                 <div class="participantFile">
-                  <input type="text" name="">
+                  <input type="text" name="" required="">
                   <label>Select Content PPT File</label>
                   <img src=".\assets\upload.png" alt="">
                 </div>
                 <div class="participantFile">
-                  <input type="text" name="">
+                  <input type="text" name="" required="">
                   <label>Select participant xl sheet</label>
                   <img src=".\assets\upload.png" alt="">
                 </div>
               </div>
               <div class="mail">
-                <input type="text" name="">
+                <input type="text" name="" required="">
                 <label>Mail Body</label>
               </div>
+              <div class="line"></div>
             </div>
             <div class="col-3 instruction">
               <button><img src=".\assets\save.png" alt="">SAVE</button>
@@ -87,17 +86,17 @@
               <button><img src=".\assets\reminder.png" alt="">REMIND</button>
               <button><img src=".\assets\report.png" alt="">GENERATE REPORT</button>
               <div class="dropup">
-                <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">+</button>
+                <button type="button" id="changeBtn" class="btn" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" (click)="changeText()" [(ngModal)]="plus">+</button>
                 <div class="dropdown-menu">
-                  <div class="patch"> </div>
+                  <div id="patch" class="patch"> </div>
                   <div class="slider">
                     <a routerLink="/password">
-                      <button class="btnPassword">Change Password</button>
+                      <button class="btnSuperAdmin">Change Password</button>
                     </a>
                     <button id="btnSuperAdmin" class="btnSuperAdmin" data-toggle="modal"
                       data-target="#superAdminModal">Add/Remove Super Admins</button>
-                    <button id="btnAdmin" class="btnAdmin" data-toggle="modal" data-target="#adminModal">Add/Remove
+                    <button id="btnAdmin" class="btnSuperAdmin" data-toggle="modal" data-target="#adminModal">Add/Remove
                       Admins</button>
                   </div>
                 </div>
@@ -111,7 +110,7 @@
   <div class="bg-modal" id="superAdminModal" tabindex="-1" role="dialog" aria-labelledby="superAdminModalLabel"
     aria-hidden="true">
     <div class="modal-content">
-      <a href="/home">
+      <a href="home">
         <div id="close" class="close">+</div>
       </a>
       <p>Add/Remove Super Admins</p>
@@ -119,21 +118,22 @@
       <input type="text" placeholder="Enter Employment code">
       <input class="adminMail" type="text" placeholder="Enter Mail ID">
       <button class="add">+</button>
+      <div class="rectangle"></div>
       <div class="employOne">
-        <input type="text" placeholder="Enter Name">
-        <input type="text" placeholder="Enter Employment code">
-        <input class="adminMail" type="text" placeholder="Enter Mail ID">
+        <input type="text" value="Kevin">
+        <input type="text" value="RT12345">
+        <input class="adminMail" type="text" value="kevin@robosoftin.com">
         <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
       </div>
       <div class="employTwo">
-        <input type="text" placeholder="Enter Name">
-        <input type="text" placeholder="Enter Employment code">
-        <input class="adminMail" type="text" placeholder="Enter Mail ID">
+        <input type="text" value="john">
+        <input type="text" value="RT23456">
+        <input class="adminMail" type="text" value="john@robosoftin.com">
         <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
       </div>
-      <a href="/home">
+      <a href="home">
         <button class="cancel">Update</button></a>
       <button class="cancel">Cancel</button>
     </div>
@@ -149,17 +149,18 @@
       <input type="text" placeholder="Enter Employment code">
       <input class="adminMail" type="text" placeholder="Enter Mail ID">
       <button class="add">+</button>
+      <div class="rectangle"></div>
       <div class="employOne">
-        <input type="text" placeholder="Enter Name">
-        <input type="text" placeholder="Enter Employment code">
-        <input class="adminMail" type="text" placeholder="Enter Mail ID">
+        <input type="text" value="Rob">
+        <input type="text" value="RT54321">
+        <input class="adminMail" type="text" value="rob@robosoftin.com">
         <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
       </div>
       <div class="employTwo">
-        <input type="text" placeholder="Enter Name">
-        <input type="text" placeholder="Enter Employment code">
-        <input class="adminMail" type="text" placeholder="Enter Mail ID">
+        <input type="text" value="Jane">
+        <input type="text" value="RT98765">
+        <input class="adminMail" type="text" value="jane@robosoftin.com">
         <button class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         <button class="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
       </div>
@@ -168,6 +169,4 @@
       <button class="cancel">Cancel</button>
     </div>
   </div>
-
-  <script src="./homescreen.js"></script>
 </body>

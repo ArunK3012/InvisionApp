@@ -50,7 +50,8 @@ body {
         outline: 0;
       }
 
-      &:focus~label {
+      &:focus~label,
+      &:valid~label {
         font-size: 12px;
         top: -9px;
         background-color: #ffffff;
@@ -83,10 +84,16 @@ body {
     }
   }
 
+  a:hover{
+    text-decoration: none;
+    color: #000000;
+  }
+
   p {
     position: relative;
     top: 25%;
     left: 41%;
     font-size: 13px;
+    color: #000000;
   }
 }
