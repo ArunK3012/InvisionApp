@@ -8,16 +8,18 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeScreenComponent } from './components/home-screen/home-screen.component';
 import { PasswordComponent } from './components/password/password.component';
-import {NotificationComponent} from './components/notification/notification.component';
-import { FormsModule } from '@angular/forms'; 
+import { NotificationComponent } from './components/notification/notification.component';
+import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PasswordComponent,
-    HomeScreenComponent,
-    NotificationComponent
+    NotificationComponent,
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,

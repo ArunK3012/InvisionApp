@@ -1,4 +1,4 @@
-import { AuthService } from './auth.service';
+import { AuthService } from '../service/auth.service';
 import { Injectable } from '@angular/core';
 import { CanActivate, CanActivateChild, CanDeactivate, CanLoad, Route, UrlSegment, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -17,7 +17,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanDeactivate<u
   }
 
 checkLogin(url: string): true|UrlTree{
-  if(this.authService.isLoggedIn){return true;}
+  if(this.authService.loggedin){return true;}
 
   this.authService.redirectUrl = url;
   return this.router.parseUrl('/login');

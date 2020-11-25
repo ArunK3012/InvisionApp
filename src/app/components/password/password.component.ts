@@ -1,4 +1,4 @@
-import { AuthService } from 'src/app/auth/auth.service';
+import { AuthService } from 'src/app/service/auth.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,18 +12,20 @@ export class PasswordComponent implements OnInit {
   newPassword: string;
   confirmPassword: string;
 
-  constructor(private router: Router,
+  constructor(public router: Router,
     private authservice: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  validatePasswordMatch(): void{
-    if(this.newPassword !== this.confirmPassword){
+  verifyPasswordMatch(): void {
+    if (this.newPassword !== this.confirmPassword) {
       alert('Passwords do not match');
+      this.router.navigate(['password']);
     }
     else {
       alert('Password Reset Successful');
+      this.router.navigate(['login']);
     }
   }
 }

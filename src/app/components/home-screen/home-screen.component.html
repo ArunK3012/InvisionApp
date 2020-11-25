@@ -1,7 +1,8 @@
 <body>
+  <div (click)="off()" id="overlay"></div>
   <div class="container-fluid">
     <img src=".\assets\logo.jpg" alt="">
-    <div class="userProfile">
+    <div class="userProfile" (click)="logout()">
       <p>Jane Doe</p>
       <img src="https://ps.w.org/wp-user-avatar/assets/icon-256x256.png?rev=1755722" alt="">
     </div>
@@ -22,60 +23,64 @@
             <div class="col-9 details">
               <h5>Questionnaire</h5>
               <div class="title">
-                <input type="text" name="" required="">
+                <input type="text" name="" value="Secure coding Guidelines" required="">
                 <label>Enter Title</label>
               </div>
               <p>please enter appropriate title</p>
               <div class="description">
-                <input type="text" name="" required="">
+                <input type="text" class="inputLink" name="" required="" value=".">
                 <label>Description</label>
+                <p>These Guidelines Helps you to code in a secure manor which would <br>assist in keeping the product
+                  data safe</p>
               </div>
               <div class="content">
                 <div class="btnTitle">
-                  <input type="text" name="" required="">
+                  <input type="text" class="btnText" name="" required="" value="I Accept">
                   <label>Button Title</label>
                 </div>
                 <div class="btnTitle">
-                  <input type="text" name="" required="">
+                  <input type="text" class="btnText" name="" required="" value="I have the red guidelines">
                   <label>Button Text</label>
                 </div>
               </div>
-              <div class="title">
-                <input type="text" name="" required="">
+              <div class="boxTitle">
+                <input type="text" name="" required="" value="I had read the guidelines">
                 <label>Check box text</label>
               </div>
               <h6>Additional Details</h6>
               <div class="start">
                 <div class="startDate">
-                  <input type="text" name="" required="">
+                  <input type="text" name="" required="" value="17/08/2020">
                   <label>Select Start Date</label>
                   <img src=".\assets\calender.png" alt="">
                 </div>
                 <div class="startDate">
-                  <input type="text" name="" required="">
+                  <input type="text" name="" required="" value="17/09/2020">
                   <label>Select End Date</label>
                   <img src=".\assets\calender.png" alt="">
                 </div>
                 <div class="startDate">
-                  <input type="text" name="" required="">
+                  <input type="text" name="" required="" value=" Days">
                   <label>Auto Reminder</label>
                 </div>
               </div>
               <div class="participant">
                 <div class="participantFile">
-                  <input type="text" name="" required="">
+                  <input type="text" name="" required="" value="Secure coding.ppt">
                   <label>Select Content PPT File</label>
                   <img src=".\assets\upload.png" alt="">
                 </div>
                 <div class="participantFile">
-                  <input type="text" name="" required="">
+                  <input type="text" name="" required="" value="Participant.xls">
                   <label>Select participant xl sheet</label>
                   <img src=".\assets\upload.png" alt="">
                 </div>
               </div>
               <div class="mail">
-                <input type="text" name="" required="">
+                <input type="text" class="inputLink" name="" required="" value=".">
                 <label>Mail Body</label>
+                <p>Hello <br>You are hear-by invited to read and accept the terms and conditions by <br>clicking on the
+                  following link <br> </p>
               </div>
               <div class="line"></div>
             </div>
@@ -87,11 +92,10 @@
               <button><img src=".\assets\report.png" alt="">GENERATE REPORT</button>
               <div class="dropup">
                 <button type="button" id="changeBtn" class="btn" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false" (click)="changeText()" [(ngModal)]="plus">+</button>
+                  aria-expanded="false" (click)="on()">+</button>
                 <div class="dropdown-menu">
-                  <div id="patch" class="patch"> </div>
                   <div class="slider">
-                    <a routerLink="/password">
+                    <a href="/password">
                       <button class="btnSuperAdmin">Change Password</button>
                     </a>
                     <button id="btnSuperAdmin" class="btnSuperAdmin" data-toggle="modal"

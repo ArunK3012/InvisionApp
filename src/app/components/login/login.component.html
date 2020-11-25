@@ -5,17 +5,19 @@
   <div class="container">
     <h3>Login</h3>
     <div class="username">
-      <input type="text" name="" required="" value="Arun.kp">
+      <input type="text" name="" required="" value="Arun.kp" [(ngModel)]="username">
       <label>Enter Username</label>
     </div>
     <div class="username">
-      <input type="password" name="" required="" value="Arun">
+      <input type="password" name="" required="" value="Arun" [(ngModel)]="password">
       <label>Enter Password</label>
     </div>
     <a href="/home">
-      <button type="button" onclick="login()">Login</button></a>
-    <a href="/notification">
-      <p>Forgot Password?</p>
-    </a>
+    <button type="button" (click)="login()">Login</button></a>
+    <p [routerLink]="['/notification']" routerLinkActive="router-link-active">Forgot Password?</p>
   </div>
+
+  
 </body>
+
+[routerLink]="['/home']" routerLinkActive="router-link-active"

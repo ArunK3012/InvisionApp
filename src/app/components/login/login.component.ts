@@ -1,7 +1,9 @@
-import { AuthService } from 'src/app/auth/auth.service';
+import { AuthService } from 'src/app/service/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { from } from 'rxjs';
+import { Url } from 'url';
+import { url } from 'inspector';
 
 @Component({
   selector: 'app-login',
@@ -10,22 +12,28 @@ import { from } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
 
-  message: string;
-  user='';
-  constructor(public authservice: AuthService, public router: Router) { }
+  username: string;
+  password: string;
+  title: 'invision-app';
+
+  constructor(public authservice: AuthService, public router: Router) {
+    if (this.authservice.loggedin) {
+      this.router.navigate(['home']);
+    }
+  }
 
   ngOnInit(): void {
-localStorage.setItem('sessionUser',this.user)
+    this.login();
   }
 
   login(): void {
-    this.message = 'Logging in..';
-
-    this.authservice.login().then(() => {
-      if (this.authservice.isLoggedIn) {
-        this.router.navigate([this.authservice.redirectUrl]);
+    if (this.username != '' && this.password != '') {
+      if (this.authservice.login(this.username, this.password)) {
+        this.router.navigate(["/home"]);
       }
-    });
-
+      else {
+        this.router.navigate(['/login']);
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
+import { AuthService } from 'src/app/service/auth.service';
 import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Button } from 'protractor';
 
 @Component({
@@ -10,15 +11,25 @@ import { Button } from 'protractor';
 })
 export class HomeScreenComponent implements OnInit {
 
-  plus='';
-  constructor() { }
+  plus = '';
+  constructor(private router: Router,
+    private authservice: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  changeText() {
-    if (this.plus !== "+") document.getElementById("changeBtn").style.transform = 'rotate(-45deg)';
-    if(this.plus === "+") document.getElementById("changeBtn").style.transform = 'rotate(45deg)';
+  on() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("changeBtn").style.transform= "rotate(45deg)";
   }
+
+  off() {
+    document.getElementById("overlay").style.display = "none";
   }
+
+  logout() {
+    this.authservice.logout();
+    this.router.navigate(['/login']);
+  }
+}
 
