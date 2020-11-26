@@ -12,8 +12,7 @@ export class PasswordComponent implements OnInit {
   newPassword: string;
   confirmPassword: string;
 
-  constructor(public router: Router,
-    private authservice: AuthService) { }
+  constructor(public router: Router, private authservice: AuthService) { }
 
   ngOnInit(): void {
   }

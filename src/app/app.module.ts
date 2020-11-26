@@ -19,7 +19,6 @@ import { FooterComponent } from './components/footer/footer.component';
     PasswordComponent,
     NotificationComponent,
     FooterComponent,
-    
   ],
   imports: [
     BrowserModule,

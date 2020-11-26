@@ -12,7 +12,6 @@ describe('HomeScreenComponent', () => {
     })
     .compileComponents();
   });
-  
   beforeEach(() => {
     fixture = TestBed.createComponent(HomeScreenComponent);
     component = fixture.componentInstance;

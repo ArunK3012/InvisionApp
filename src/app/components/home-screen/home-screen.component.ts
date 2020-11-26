@@ -12,24 +12,22 @@ import { Button } from 'protractor';
 export class HomeScreenComponent implements OnInit {
 
   plus = '';
-  constructor(private router: Router,
-    private authservice: AuthService) { }
+  constructor(private router: Router, private authservice: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  on() {
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("changeBtn").style.transform= "rotate(45deg)";
+  on(): void {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('changeBtn').style.transform = 'rotate(45deg)';
   }
 
-  off() {
-    document.getElementById("overlay").style.display = "none";
+  off(): void {
+    document.getElementById('overlay').style.display = 'none';
   }
 
-  logout() {
+  logout(): void {
     this.authservice.logout();
     this.router.navigate(['/login']);
   }
 }
-
